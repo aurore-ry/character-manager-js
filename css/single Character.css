@@ -1,0 +1,83 @@
+body {
+  max-width: 1440px;
+  background-color: #6c0979;
+  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #6c0979), to(#0016ff));
+  background: linear-gradient(90deg, #6c0979 35%, #0016ff 100%);
+}
+
+body h1 {
+  padding-left: 5em;
+  color: white;
+  text-transform: capitalize;
+}
+
+body li {
+  list-style-type: none;
+}
+
+body img {
+  border-radius: 50%;
+  border-style: solid red 2px;
+}
+
+body a {
+  padding: 1em;
+  margin: 1em;
+  border: solid 1px white;
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+  background-color: #6c0979;
+}
+
+body a:hover {
+  background-color: #0016ff;
+}
+
+body .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .card {
+  margin: 0 auto;
+  border-radius: 10px;
+  width: 80%;
+  background-color: darkslategrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .card__image {
+  padding-top: 2em;
+}
+
+body .card__name {
+  text-transform: capitalize;
+  color: white;
+}
+
+body .card__shortDesc {
+  width: 70%;
+  color: lightgray;
+  font-size: smaller;
+  padding-bottom: 2em;
+}
+
+body .card__longDesc {
+  width: 90%;
+  padding-bottom: 5em;
+}
+/*# sourceMappingURL=single Character.css.map */
