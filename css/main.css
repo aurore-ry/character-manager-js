@@ -1,18 +1,13 @@
 body {
   margin: auto 0;
+  background: #a501b5;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(165, 1, 181, 0.892577)), to(rgba(2, 11, 23, 0.858964)));
+  background: linear-gradient(90deg, rgba(165, 1, 181, 0.892577) 0%, rgba(2, 11, 23, 0.858964) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a501b5",endColorstr="#020b17",GradientType=1);
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-}
-
-header .nav-container {
+  margin: 20px 15px 78px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,5 +15,117 @@ header .nav-container {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50%;
+  border-bottom: 2px solid white;
+}
+
+header h1 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+  color: wheat;
+}
+
+header .search-input {
+  padding-top: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .search-input #search-bar {
+  border-radius: 15px;
+  border: none;
+}
+
+header .search-input .submit-search-button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: none;
+}
+
+header .search-input .submit-search-button .search-glass {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.hero-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 45px;
+  max-width: 100%;
+  max-height: 100%;
+  gap: 25px;
+}
+
+.hero-wrapper .hero-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 20%;
+  max-height: 15%;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.37);
+  border-radius: 12px;
+}
+
+.hero-wrapper .hero-card .avatar-hero-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.hero-wrapper .hero-card .hero-name-card {
+  color: white;
+}
+
+.hero-wrapper .hero-card .hero-description-card {
+  text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: white;
+}
+
+.hero-wrapper .hero-card .btn-see-hero {
+  width: 148px;
+  height: 22px;
+  background-color: purple;
+  border-radius: 22px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

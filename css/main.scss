@@ -1,13 +1,117 @@
 body {
   margin: auto 0;
+  background: rgb(165, 1, 181);
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(165, 1, 181, 0.8925770991990546) 0%,
+    rgba(2, 11, 23, 0.8589636538209033) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(165, 1, 181, 0.8925770991990546) 0%,
+    rgba(2, 11, 23, 0.8589636538209033) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(165, 1, 181, 0.8925770991990546) 0%,
+    rgba(2, 11, 23, 0.8589636538209033) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a501b5",endColorstr="#020b17",GradientType=1);
 }
 
 header {
+  margin: 20px 15px 78px 15px;
   display: flex;
-  flex-flow: column;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 50%;
+  border-bottom: 2px solid white;
 
-  .nav-container {
+  h1 {
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: wheat;
+  }
+  .search-input {
+    padding-top: 35px;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
+
+    #search-bar {
+      border-radius: 15px;
+      border: none;
+    }
+
+    .submit-search-button {
+      width: 35px;
+      height: 35px;
+      border: none;
+      background: none;
+
+      .search-glass {
+        width: 25px;
+        height: 25px;
+
+        color: white;
+      }
+    }
+  }
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 45px;
+  max-width: 100%;
+  max-height: 100%;
+
+  gap: 25px;
+
+  .hero-card {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 20%;
+    max-height: 15%;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.37);
+    border-radius: 12px;
+
+    .avatar-hero-card {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+
+    .hero-name-card {
+      color: white;
+    }
+
+    .hero-description-card {
+      text-align: center;
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 16px;
+      line-height: 1.2;
+      color: white;
+    }
+
+    .btn-see-hero {
+      width: 148px;
+      height: 22px;
+
+      background-color: purple;
+      border-radius: 22px;
+
+      text-decoration: none;
+
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
   }
 }
