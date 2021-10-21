@@ -1,53 +1,55 @@
 body {
   margin: auto 0;
-  background: rgb(165, 1, 181);
-  background: -moz-linear-gradient(
-    90deg,
-    rgba(165, 1, 181, 0.8925770991990546) 0%,
-    rgba(2, 11, 23, 0.8589636538209033) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgba(165, 1, 181, 0.8925770991990546) 0%,
-    rgba(2, 11, 23, 0.8589636538209033) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgba(165, 1, 181, 0.8925770991990546) 0%,
-    rgba(2, 11, 23, 0.8589636538209033) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a501b5",endColorstr="#020b17",GradientType=1);
+
+  background-color: rgb(42, 9, 61);
+  font-family: sans-serif;
 }
 
-header {
+header#app-header {
   margin: 20px 15px 78px 15px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
-  gap: 50%;
-  border-bottom: 2px solid white;
+  justify-content: space-evenly;
+
+  border-bottom: 2px solid rgba(255, 255, 255, 0.219);
 
   h1 {
+    margin: 0;
     font-family: sans-serif;
     text-transform: uppercase;
     color: wheat;
   }
+
+  @media screen and (max-width: 769px) {
+    h1 {
+      font-size: 18px;
+    }
+  }
+
   .search-input {
-    padding-top: 35px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
 
     #search-bar {
-      border-radius: 15px;
+      padding: 0 20px;
+      height: 34px;
+
+      background-color: rgba(255, 255, 255, 0.219);
+      border-radius: 34px;
       border: none;
+      color: white;
     }
 
     .submit-search-button {
       width: 35px;
       height: 35px;
+
+      margin-left: 10px;
+
       border: none;
       background: none;
+      cursor: pointer;
 
       .search-glass {
         width: 25px;
@@ -57,6 +59,12 @@ header {
       }
     }
   }
+}
+
+.divider {
+  background-color: rgba(255, 255, 255, 0.219);
+  width: 100%;
+  height: 2px;
 }
 
 .hero-wrapper {
@@ -69,49 +77,77 @@ header {
 
   gap: 25px;
 
-  .hero-card {
+  & .hero-card {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center;
-    max-width: 20%;
-    max-height: 15%;
-    padding-top: 25px;
-    padding-bottom: 15px;
-    background-color: rgba(0, 0, 0, 0.37);
-    border-radius: 12px;
+    align-items: flex-start;
 
-    .avatar-hero-card {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
+    flex: 0 0 20%;
+    min-width: 275px;
+
+    padding: 25px 25px;
+
+    background-color: #390b5c;
+    border-radius: 12px;
+    box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+
+    & header.hero-header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+
+      gap: 20px;
     }
 
-    .hero-name-card {
+    & img.avatar-hero-card {
+      margin: 0;
+      width: 56px;
+      height: 56px;
+      border-radius: 56px;
+    }
+
+    & h5.hero-name-card {
+      margin: 0;
+
+      font-size: 32px;
+      line-height: 36px;
       color: white;
     }
 
-    .hero-description-card {
-      text-align: center;
-      padding-right: 15px;
-      padding-left: 15px;
+    & .hero-description-card {
+      margin-top: 10px;
+
       font-size: 16px;
       line-height: 1.2;
       color: white;
+      text-align: left;
     }
 
-    .btn-see-hero {
+    & .btn-see-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-end;
+
       width: 148px;
-      height: 22px;
+      height: 40px;
 
-      background-color: purple;
-      border-radius: 22px;
+      margin-top: 10px;
+      padding: 2px 10px;
 
+      border: 2px solid rgba(255, 255, 255, 0.219);
+      border-radius: 40px;
       text-decoration: none;
-
       color: white;
       font-weight: bold;
       text-align: center;
+      transition: border-color 280ms linear 0s;
+
+      &:hover {
+        border-color: white;
+      }
     }
   }
 }
