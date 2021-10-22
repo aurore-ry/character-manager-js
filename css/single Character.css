@@ -1,5 +1,6 @@
 body {
   max-width: 1440px;
+  margin: 0 auto;
   background-color: #6c0979;
   background: -webkit-gradient(linear, left top, right top, color-stop(35%, #6c0979), to(#0016ff));
   background: linear-gradient(90deg, #6c0979 35%, #0016ff 100%);
@@ -9,6 +10,7 @@ body h1 {
   padding-left: 5em;
   color: white;
   text-transform: capitalize;
+  text-shadow: 5px 2px 2px black;
 }
 
 body li {
@@ -17,7 +19,8 @@ body li {
 
 body img {
   border-radius: 50%;
-  border-style: solid red 2px;
+  -webkit-box-shadow: 5px 2px 2px black;
+          box-shadow: 5px 2px 2px black;
 }
 
 body a {
@@ -27,10 +30,17 @@ body a {
   border-radius: 2px;
   color: white;
   text-decoration: none;
+  text-transform: capitalize;
   background-color: #6c0979;
+  -webkit-box-shadow: 5px 2px 2px black;
+          box-shadow: 5px 2px 2px black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  opacity: .5;
 }
 
 body a:hover {
+  opacity: 1;
   background-color: #0016ff;
 }
 
@@ -48,6 +58,8 @@ body .card {
   border-radius: 10px;
   width: 80%;
   background-color: darkslategrey;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

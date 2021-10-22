@@ -1,11 +1,13 @@
 body{
     max-width: 1440px;
+    margin: 0 auto;
     background-color: rgb(108,9,121);
     background: linear-gradient(90deg, rgba(108,9,121,1) 35%, rgba(0,22,255,1) 100%);
     h1{
         padding-left: 5em;
         color: white;
         text-transform: capitalize;
+        text-shadow: 5px 2px 2px black ;
         
     }
     li{
@@ -13,7 +15,7 @@ body{
     }
     img{
         border-radius: 50%;
-        border-style: solid red 2px;
+        box-shadow: 5px 2px 2px black ;
 
     }
     a{
@@ -23,9 +25,13 @@ body{
         border-radius: 2px;
         color: white;
         text-decoration: none;
+        text-transform: capitalize;
         background-color: #6c0979;
+        box-shadow: 5px 2px 2px black ;
+        transition: 0.4s;
+        opacity: .5;
         &:hover{
-            
+            opacity: 1;
             background-color: #0016ff;
         }
 
@@ -39,6 +45,7 @@ body{
         border-radius: 10px;
         width: 80%;
         background-color: darkslategrey;
+        box-shadow: 10px 5px 5px black ;
         display: flex;
         flex-direction: column;
         align-items: center;
