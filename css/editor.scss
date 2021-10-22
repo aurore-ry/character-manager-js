@@ -1,0 +1,23 @@
+body{
+    margin: 0 auto;
+    
+    
+    
+}
+.editor-wrapper{
+display: flex;
+justify-content: center;
+
+}
+.card__image-input{
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+       
+
+}
+.card__container{
+    max-width: 80%;
+    border: solid 1px violet;
+}
