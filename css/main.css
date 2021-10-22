@@ -115,6 +115,24 @@ header#app-header .search-input .submit-search-button .search-glass {
   border-radius: 12px;
   -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
           box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+  -webkit-transition: background-color 280ms linear 0s;
+  transition: background-color 280ms linear 0s;
+  -webkit-transition: -webkit-box-shadow 280ms linear 0s;
+  transition: -webkit-box-shadow 280ms linear 0s;
+  transition: box-shadow 280ms linear 0s;
+  transition: box-shadow 280ms linear 0s, -webkit-box-shadow 280ms linear 0s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.hero-wrapper .hero-card:hover {
+  background-color: #5c0d99;
+  -webkit-box-shadow: 0 5px 8px 5px rgba(120, 5, 187, 0.26);
+          box-shadow: 0 5px 8px 5px rgba(120, 5, 187, 0.26);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hero-wrapper .hero-card header.hero-header {
