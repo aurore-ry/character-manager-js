@@ -91,6 +91,15 @@ header#app-header {
     background-color: #390b5c;
     border-radius: 12px;
     box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+    transition: background-color 280ms linear 0s;
+    transition: box-shadow 280ms linear 0s;
+    transition: transform 0.2s;
+
+    &:hover {
+      background-color: #5c0d99;
+      box-shadow: 0 5px 8px 5px rgba(120, 5, 187, 0.26);
+      transform: scale(1.1);
+    }
 
     & header.hero-header {
       display: flex;

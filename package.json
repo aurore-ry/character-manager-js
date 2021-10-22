@@ -1,5 +1,14 @@
 {
-  "dependencies": {
+  "name": "characters-manager",
+  "version": "1.0.0",
+  "source": "index.html",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "format": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
     "axios": "^0.23.0",
     "parcel": "^2.0.0"
   }
