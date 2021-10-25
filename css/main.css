@@ -220,8 +220,9 @@ header#app-header .search-input .submit-search-button .search-glass {
           align-items: center;
   position: fixed;
   bottom: 0;
+  padding-bottom: 25px;
   width: 100%;
-  background-color: purple;
+  background-color: rgba(42, 9, 61, 0.842);
 }
 
 .main-page-footer .add-character-button {
@@ -234,6 +235,7 @@ header#app-header .search-input .submit-search-button .search-glass {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 25px;
   width: 148px;
   height: 40px;
   margin-top: 10px;
@@ -241,11 +243,13 @@ header#app-header .search-input .submit-search-button .search-glass {
   border: 2px solid rgba(255, 255, 255, 0.219);
   border-radius: 40px;
   text-decoration: none;
+  background-color: rgba(42, 9, 61, 0.616);
   color: white;
   font-weight: bold;
   text-align: center;
   -webkit-transition: border-color 280ms linear 0s;
   transition: border-color 280ms linear 0s;
+  cursor: pointer;
 }
 
 .main-page-footer .add-character-button:hover {
@@ -267,6 +271,15 @@ header#app-header .search-input .submit-search-button .search-glass {
   bottom: 0;
   border: 1px solid #5900ff;
   z-index: 9;
+}
+
+.main-page-footer .form-container .close-form {
+  background: none;
+  color: red;
+  font-weight: bolder;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
 }
 
 .main-page-footer .form-container .form-popup {

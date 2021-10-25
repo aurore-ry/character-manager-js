@@ -168,15 +168,16 @@ header#app-header {
   align-items: center;
   position: fixed;
   bottom: 0;
-
+  padding-bottom: 25px;
   width: 100%;
 
-  background-color: purple;
+  background-color: rgba(42, 9, 61, 0.842);
 
   & .add-character-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 25px;
 
     width: 148px;
     height: 40px;
@@ -187,10 +188,12 @@ header#app-header {
     border: 2px solid rgba(255, 255, 255, 0.219);
     border-radius: 40px;
     text-decoration: none;
+    background-color: rgba(42, 9, 61, 0.616);
     color: white;
     font-weight: bold;
     text-align: center;
     transition: border-color 280ms linear 0s;
+    cursor: pointer;
 
     &:hover {
       border-color: white;
@@ -207,6 +210,15 @@ header#app-header {
     border: 1px solid #5900ff;
     z-index: 9;
 
+    .close-form {
+      background: none;
+      color: rgb(255, 0, 0);
+      font-weight: bolder;
+      font-size: 40px;
+      border: none;
+
+      cursor: pointer;
+    }
     .form-popup {
       display: flex;
       flex-flow: column;
