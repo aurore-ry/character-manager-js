@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta charset="US-ASCII" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/editor.css" />
@@ -14,22 +15,22 @@
 <section class="editor-wrapper">
 
   <div class="card__container">
-    <form class="card__image-input" action="#">
+    <form class="card__image-input" action="#" method="post">
       <input type="image" placeholder="Picture" name="" id="input__Picture" />
       <input
-        type="text"
+        type="text/plain"
         placeholder="character name"
-        name="input__Picture"
-        id="input__Picture"
+        name="input__Name"
+        id="input__Name"
       />
       <input
-        type="text"
+        type="text/plain"
         placeholder="short description"
         name="input__shortDesc"
         id="input__shortDesc"
       />
       <input
-        type="text"
+        type="text/plain"
         placeholder="long description"
         name="input__longDesc"
         id="input__longDesc"
@@ -37,8 +38,9 @@
 
       <button
         type="submit"
-        class="submit-search-button"
-        title="click to submit"
+        class="submit-button"
+        id="submit-button"
+        title="click to edit"
       ></button>
     </form>
     </div>
@@ -47,6 +49,7 @@
         <a class="btn" href="#">characters Manager</a>
         <a class="btn" href="#">character delete</a>
       </div>
-    </div>
+    
   </body>
+  <script src="../src/main.js"></script>
 </html>
