@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
@@ -253,7 +253,38 @@
         <a class="btn-see-hero" href="#">See character</a>
       </article>
     </section>
-    <footer class="main-page-footer"></footer>
+    <footer class="main-page-footer">
+      <button class="add-character-button" onclick="openForm()">
+        add a new character <img src="" />
+      </button>
+      <div class="form-container">
+        <button class="close-form" onclick="closeForm()">X</button>
+
+        <form
+          action="index.html/characters"
+          method="post"
+          enctype="multipart/form-data"
+          class="form-popup"
+        >
+          <label for="profile_pic">Choose file to upload</label>
+          <input
+            type="file"
+            id="profile_pic"
+            name="profile_pic"
+            accept=".jpg, .jpeg, .png"
+          />
+          <label for="name-character">Name of your character</label>
+          <input type="text/plain" class="name-character" />
+          <label for="small-description"
+            >Write a short description of the character</label
+          >
+          <input type="text/plain" class="small-desc-character" />
+          <label for="long-description">Enter the story of the character</label>
+          <input type="text/plain" class="story" />
+          <button>Submit</button>
+        </form>
+      </div>
+    </footer>
   </body>
   <script src="src/main.js"></script>
 </html>
