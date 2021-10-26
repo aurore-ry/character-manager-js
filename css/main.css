@@ -285,6 +285,7 @@ header#app-header .search-input .submit-search-button .search-glass {
 }
 
 .main-page-footer .form-container .form-popup {
+  padding-top: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,9 +293,6 @@ header#app-header .search-input .submit-search-button .search-glass {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -307,5 +305,21 @@ header#app-header .search-input .submit-search-button .search-glass {
   font-weight: bold;
   -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
           box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+}
+
+.main-page-footer .form-container .form-popup .label-file {
+  padding-top: 15px;
+}
+
+.main-page-footer .form-container .form-popup .btn-file-upload {
+  padding-bottom: 18px;
+}
+
+.main-page-footer .form-container .form-popup .label-name {
+  padding-top: 12px;
+}
+
+.main-page-footer .form-container .form-popup .label-description {
+  padding-top: 12px;
 }
 /*# sourceMappingURL=main.css.map */

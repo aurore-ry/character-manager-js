@@ -221,9 +221,9 @@ header#app-header {
       cursor: pointer;
     }
     .form-popup {
+      padding-top: 24px;
       display: flex;
       flex-flow: column;
-      justify-content: center;
       align-items: center;
       align-self: center;
       width: 662px;
@@ -233,6 +233,22 @@ header#app-header {
       color: white;
       font-weight: bold;
       box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+
+      .label-file {
+        padding-top: 15px;
+      }
+
+      & .btn-file-upload {
+        padding-bottom: 18px;
+      }
+
+      & .label-name {
+        padding-top: 12px;
+      }
+
+      & .label-description {
+        padding-top: 12px;
+      }
     }
   }
 }
