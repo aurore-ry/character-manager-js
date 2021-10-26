@@ -1,6 +1,6 @@
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
@@ -9,7 +9,7 @@
   <body>
     <header id="app-header">
       <h1>Characters manager</h1>
-      <form class="search-input" action="#">
+      <form class="search-input" enctype="multipart/form-data">
         <input
           type="text"
           placeholder="Search..."
@@ -26,8 +26,43 @@
       </form>
     </header>
 
-    <section class="hero-wrapper">
-      <article class="hero-card">
+    <section class="hero-wrapper"></section>
+    <footer class="main-page-footer">
+      <button class="add-character-button" onclick="openForm()">
+        add a new character <img src="" />
+      </button>
+
+      <div class="form-container">
+        <button class="close-form" onclick="closeForm()">X</button>
+
+        <form
+          action="index.html/characters"
+          method="post"
+          enctype="multipart/form-data"
+          class="form-popup"
+        >
+          <label for="profile_pic">Choose file to upload</label>
+          <input
+            type="file"
+            id="profile_pic"
+            name="profile_pic"
+            accept=".jpg, .jpeg, .png"
+          />
+          <label for="name-character">Name of your character</label>
+          <input type="text/plain" class="name-character" />
+          <label for="small-description"
+            >Write a short description of the character</label
+          >
+          <input type="text/plain" class="small-desc-character" />
+          <label for="long-description">Enter the story of the character</label>
+          <input type="text/plain" class="story" />
+          <button>Submit</button>
+        </form>
+      </div>
+    </footer>
+
+    <template id="card-template">
+      <div class="hero-card">
         <header class="hero-header">
           <img class="avatar-hero-card" src="./images/loki.jpeg" />
           <h5 class="hero-name-card">Loki</h5>
@@ -39,221 +74,11 @@
           king drives him to sow chaos in Asgard. In his lust for power, he
           extends his reach to Earth.
         </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-      <article class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdeneedededededed with glorious purpose. His desire
-          to be a king drives him to sow chaos in Asgard. In his lust for power,
-          he, he ;ejdkd mdmsosodx slxx dldlxldldlddkcldld dldldld extends his
-          reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="#">See character</a>
-      </article>
-    </section>
-    <footer class="main-page-footer"></footer>
+        <a class="btn-see-hero" href="./html/singleCharacter.html"
+          >See character</a
+        >
+      </div>
+    </template>
   </body>
   <script src="src/main.js"></script>
 </html>
