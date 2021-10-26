@@ -89,6 +89,7 @@ header#app-header .search-input .submit-search-button .search-glass {
   margin-bottom: 45px;
   max-width: 100%;
   max-height: 100%;
+  padding-bottom: 65px;
   gap: 25px;
 }
 
@@ -270,6 +271,7 @@ header#app-header .search-input .submit-search-button .search-glass {
   position: fixed;
   bottom: 0;
   border: 1px solid #5900ff;
+  background-color: #06030894;
   z-index: 9;
 }
 
@@ -298,10 +300,12 @@ header#app-header .search-input .submit-search-button .search-glass {
           align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 380px;
-  height: 348px;
+  width: 662px;
+  height: 448;
   background-color: #5f08a1;
   color: white;
   font-weight: bold;
+  -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
 }
 /*# sourceMappingURL=main.css.map */
