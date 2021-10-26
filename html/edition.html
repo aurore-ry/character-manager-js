@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta charset="US-ASCII" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/editor.css" />
@@ -11,42 +12,29 @@
     <header id="app-header">
       <h1>character editor</h1>
     </header>
-<section class="editor-wrapper">
-
-  <div class="card__container">
-    <form class="card__image-input" action="#">
-      <input type="image" placeholder="Picture" name="" id="input__Picture" />
-      <input
-        type="text"
-        placeholder="character name"
-        name="input__Picture"
-        id="input__Picture"
-      />
-      <input
-        type="text"
-        placeholder="short description"
-        name="input__shortDesc"
-        id="input__shortDesc"
-      />
-      <input
-        type="text"
-        placeholder="long description"
-        name="input__longDesc"
-        id="input__longDesc"
-      />
-
-      <button
-        type="submit"
-        class="submit-search-button"
-        title="click to submit"
-      ></button>
+    <form>
+      <label for="hindex">Hero index:</label><br>
+      <input type="text" id="d" name="hindex" placeholder="Hero name...."
+      value="test"><br>
     </form>
-    </div>
-</section>
+    <button type="submitHero" id="submit_index" >Choose Heroe</button>
+    <form>
+      <label for="himage">Hero Picture</label>
+      <input type="image" id="i" width="56" height="56" value="image">
+      <label for="hname">Hero name:</label><br>
+      <input type="text" id="a" name="hname" placeholder="Hero name ...."><br>
+      <label for="hsdesc">Short description:</label><br>
+      <input type="text" id="b" name="hsdesc" placeholder="Hero short desc ..."><br>
+      <label for="hldesc">Long description:</label><br>
+      <input type="text" id="c" name="hldesc" placeholder="Hero long desc ..."><br>
+    </form> 
+     <button type="submit" id="submit_button" >Post Edition</button>
+    
       <div class="navbar">
         <a class="btn" href="#">characters Manager</a>
         <a class="btn" href="#">character delete</a>
       </div>
-    </div>
+    
   </body>
+  <script src="../src/main.js"></script>
 </html>

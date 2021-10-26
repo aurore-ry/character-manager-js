@@ -1,8 +1,41 @@
 body{
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background-color:violet;
     
+}
+#b{
+    height: 50px;
+    text-wrap:wrap;
+}
+h1{
+    text-transform: capitalize;
+    color:white;
+}
+button{
+    margin: 1em;
+}
+
+form{
+    background-color:grey;
+    padding:2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar{
+    padding-top: 1em;
+    height: 100px;
     
-    
+}
+.btn{
+    padding:0.5em;
+    background-color:white;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
 }
 .editor-wrapper{
 display: flex;
