@@ -26,24 +26,7 @@
       </form>
     </header>
 
-    <section class="hero-wrapper">
-      <template class="hero-card">
-        <header class="hero-header">
-          <img class="avatar-hero-card" src="./images/loki.jpeg" />
-          <h5 class="hero-name-card">Loki</h5>
-        </header>
-        <hr class="divider" />
-        <p class="hero-description-card">
-          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
-          of Mischief, is burdened with glorious purpose. His desire to be a
-          king drives him to sow chaos in Asgard. In his lust for power, he
-          extends his reach to Earth.
-        </p>
-        <a class="btn-see-hero" href="./html/singleCharacter.html"
-          >See character</a
-        >
-      </template>
-    </section>
+    <section class="hero-wrapper"></section>
     <footer class="main-page-footer">
       <button class="add-character-button" onclick="openForm()">
         add a new character <img src="" />
@@ -76,6 +59,25 @@
         </form>
       </div>
     </footer>
+
+    <template id="card-template">
+      <div class="hero-card">
+        <header class="hero-header">
+          <img class="avatar-hero-card" src="./images/loki.jpeg" />
+          <h5 class="hero-name-card">Loki</h5>
+        </header>
+        <hr class="divider" />
+        <p class="hero-description-card">
+          Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God
+          of Mischief, is burdened with glorious purpose. His desire to be a
+          king drives him to sow chaos in Asgard. In his lust for power, he
+          extends his reach to Earth.
+        </p>
+        <a class="btn-see-hero" href="./html/singleCharacter.html"
+          >See character</a
+        >
+      </div>
+    </template>
   </body>
   <script src="src/main.js"></script>
 </html>
