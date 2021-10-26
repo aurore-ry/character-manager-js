@@ -69,6 +69,12 @@ const home = async () => {
       ".hero-description-card"
     );
     smallDescription.textContent = character.shortDescription;
+
+    const ditailsButton = currentCharacter.querySelector(".btn-see-hero");
+    ditailsButton.setAttribute(
+      "href",
+      `./html/singleCharacter.html?id=${character.id}`
+    );
   });
 };
 

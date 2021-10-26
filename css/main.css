@@ -300,7 +300,7 @@ header#app-header .search-input .submit-search-button .search-glass {
       align-self: center;
   width: 380px;
   height: 348px;
-  background-color: rgba(27, 27, 27, 0.733);
+  background-color: #5f08a1;
   color: white;
   font-weight: bold;
 }
