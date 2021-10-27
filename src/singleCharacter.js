@@ -120,7 +120,12 @@ const displayCharacter = async()=>{
     target.appendChild(templateSingle);
 
 }
+// link to editor page
 
+let edit = document.querySelector("#edit")
+edit.setAttribute(
+  "href",
+  "./edition.html?id="+ currentID);
 // delete character
 deleteChar.addEventListener("click", async()=>{
 
