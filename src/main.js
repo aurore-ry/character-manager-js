@@ -2,7 +2,6 @@ const url = "https://character-database.becode.xyz";
 
 const cardTemplate = document.querySelector("#card-template");
 
-
 const get = async (url) => {
   try {
     const req = await fetch(url);
@@ -40,15 +39,54 @@ const del = async (url) => {
   });
 };
 
+// display all
+const home = async () => {
+  const char1 = await getCharacterById("a4d08a81-d02b-4545-97f8-87ee7bdb190b");
+  console.log("char1=", char1.name);
 
+  const characters = await getAllCharacters();
+  const parentEl = document.querySelector(".hero-wrapper");
 
+  characters.forEach((character) => {
+    const templateNode = cardTemplate.content.firstElementChild.cloneNode(true);
 
+    const currentCharacter = document
+      .createElement("div")
+      .appendChild(templateNode);
+    console.log(currentCharacter);
+    currentCharacter.setAttribute("id", character.id);
 
+    const img = currentCharacter.querySelector("img.avatar-hero-card");
+    img.setAttribute("src", `data:image/png;base64,${character.image}`);
+    img.setAttribute("width", "100px");
+    img.setAttribute("height", "100px");
 
+    const name = currentCharacter.querySelector(".hero-name-card");
+    name.textContent = character.name;
+    parentEl.appendChild(currentCharacter);
 
+    const smallDescription = currentCharacter.querySelector(
+      ".hero-description-card"
+    );
+    smallDescription.textContent = character.shortDescription;
 
+    const ditailsButton = currentCharacter.querySelector(".btn-see-hero");
+    ditailsButton.setAttribute(
+      "href",
+      `./html/singleCharacter.html?id=${character.id}`
+    );
+  });
+};
 
+// -- Main page open form for add character --
+const openForm = () => {
+  document.querySelector(".form-container").style.display = "flex";
+};
+const closeForm = () => {
+  document.querySelector(".form-container").style.display = "none";
+};
 
+home();
 
 
 
@@ -223,7 +261,7 @@ const put = async (url, data, id) => {
 
 
 
-let testid="dcaf3afb-3f20-4e7b-90a9-55b3eaafaf1d";
+let testid="1d91da00-5905-41cd-8586-497788053ff8";
 
 //Start Phil
 let submitIndex = document.querySelector("#submit_index");
@@ -233,7 +271,8 @@ let nameField = document.querySelector("#a");
 let shortDescField = document.querySelector("#b");
 let longDescField = document.querySelector("#c");
 
-nameField.value="";
+if ( typeof nameField !== undefined){ 
+  nameField.value= "";}
 shortDescField.value="";
 longDescField.value="";
 
@@ -291,3 +330,4 @@ submitButton.addEventListener("click", async()=>{
 
 
 });
+
