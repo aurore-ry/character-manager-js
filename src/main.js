@@ -1,5 +1,4 @@
 const url = "https://character-database.becode.xyz";
-
 const cardTemplate = document.querySelector("#card-template");
 const createCharacterPopup = document.querySelector(".form-container");
 
@@ -131,6 +130,7 @@ const home = async () => {
   });
 };
 
+// Add new character
 const onCreateCharacterFormSubmit = async (ev) => {
   ev.preventDefault();
 
@@ -184,9 +184,10 @@ const closeForm = () => {
 
 home();
 
+//Start Phil
+
 let testid = "dcaf3afb-3f20-4e7b-90a9-55b3eaafaf1d";
 
-//Start Phil
 let submitIndex = document.querySelector("#submit_index");
 let submitButton = document.querySelector("#submit_button");
 
@@ -195,6 +196,7 @@ let shortDescField = document.querySelector("#b");
 let longDescField = document.querySelector("#c");
 
 nameField.value = "";
+
 shortDescField.value = "";
 longDescField.value = "";
 

@@ -179,24 +179,26 @@ header#app-header {
     align-items: center;
     padding-bottom: 25px;
 
-    width: 148px;
-    height: 40px;
+    // width: 158px;
+    height: 52px;
 
     margin-top: 10px;
     padding: 2px 10px;
 
-    border: 2px solid rgba(255, 255, 255, 0.219);
+    border: 2px solid rgba(136, 8, 255, 0.664);
     border-radius: 40px;
     text-decoration: none;
+    box-shadow: 0 5px 8px 5px rgba(207, 17, 255, 0.24);
     background-color: rgba(42, 9, 61, 0.616);
     color: white;
+    font-size: 22px;
     font-weight: bold;
     text-align: center;
     transition: border-color 280ms linear 0s;
     cursor: pointer;
 
     &:hover {
-      border-color: white;
+      border: 2px solid rgb(255, 255, 255);
     }
   }
   .form-container {
@@ -235,10 +237,19 @@ header#app-header {
       box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
 
       .label-file {
-        padding-top: 15px;
+        padding: 2px 5px;
+
+        border-radius: 8px;
+        border: 2px solid rgb(255, 255, 255);
+
+        cursor: pointer;
+        background: #ffffff24;
+        color: white;
+        cursor: pointer;
       }
 
       & .btn-file-upload {
+        display: none;
         padding-bottom: 18px;
       }
 
