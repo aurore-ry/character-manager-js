@@ -185,8 +185,10 @@ const closeForm = () => {
 home();
 
 //Start Phil
-
-let testid = "1d91da00-5905-41cd-8586-497788053ff8";
+// editor page 
+let currentPageUrl = window.location.href;
+let currentID = currentPageUrl.split("=")[1];
+let testid = currentID;
 
 let submitIndex = document.querySelector("#submit_index");
 let submitButton = document.querySelector("#submit_button");
@@ -200,7 +202,7 @@ nameField.value = "";
 shortDescField.value = "";
 longDescField.value = "";
 
-submitIndex.addEventListener("click", async () => {
+let fonctionEdition =  async () => {
   /* let heroeIndex = document.querySelector("#submit_index").value; */
 
   let testall = await get(url);
@@ -218,7 +220,9 @@ submitIndex.addEventListener("click", async () => {
   longDescField.value = editLongDesc;
 
   console.log(editName);
-});
+};
+
+fonctionEdition();
 
 submitButton.addEventListener("click", async () => {
   /* let imageInput = document.querySelector("#i").src; */
