@@ -1,76 +1,80 @@
-body{
-    max-width: 1440px;
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: rgb(42, 9, 61);
+  font-family: sans-serif;
+  h1 {
+    padding-left: 5em;
+    color: white;
+    text-transform: uppercase;
+  }
+  li {
+    list-style-type: none;
+  }
+  img {
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px #0000003d;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .edit-style-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+
+    width: 148px;
+    height: 40px;
+
+    margin-top: 10px;
+    padding: 2px 10px;
+
+    border: 2px solid rgba(255, 255, 255, 0.219);
+    border-radius: 40px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: border-color 280ms linear 0s;
+
+    &:hover {
+      border-color: white;
+    }
+  }
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+  }
+  .card {
     margin: 0 auto;
-    background-color: rgb(108,9,121);
-    background: linear-gradient(90deg, rgba(108,9,121,1) 35%, rgba(0,22,255,1) 100%);
-    h1{
-        padding-left: 5em;
-        color: white;
-        text-transform: capitalize;
-        text-shadow: 5px 2px 2px black ;
-        
+    border-radius: 10px;
+    width: 80%;
+    background-color: #390b5c;
+    box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__image {
+      padding-top: 2em;
     }
-    li{
-        list-style-type: none;
+    &__name {
+      text-transform: capitalize;
+      color: white;
     }
-    img{
-        border-radius: 50%;
-        box-shadow: 5px 2px 2px black ;
-
+    &__shortDesc {
+      width: 70%;
+      color: lightgray;
+      font-size: smaller;
+      padding-bottom: 2em;
     }
-    a{
-        padding: 1em;
-        margin: 1em;
-        border: solid 1px white;
-        border-radius: 2px;
-        color: white;
-        text-decoration: none;
-        text-transform: capitalize;
-        background-color: #6c0979;
-        box-shadow: 5px 2px 2px black ;
-        transition: 0.4s;
-        opacity: .5;
-        &:hover{
-            opacity: 1;
-            background-color: #0016ff;
-        }
-
+    &__longDesc {
+      width: 90%;
+      padding-bottom: 5em;
     }
-    .navbar{
-        display:flex;
-        justify-content: center;
-    }
-    .card{
-        margin: 0 auto;
-        border-radius: 10px;
-        width: 80%;
-        background-color: darkslategrey;
-        box-shadow: 10px 5px 5px black ;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &__image{
-            padding-top: 2em;
-
-        }
-        &__name{
-            text-transform: capitalize;
-            color: white;
-
-        }
-        &__shortDesc{
-            width: 70%;
-            color: lightgray;
-            font-size: smaller;
-            padding-bottom: 2em;
-        }
-        &__longDesc{
-            width: 90%;
-            padding-bottom: 5em;
-
-        }
-
-    }
-
-
+  }
 }

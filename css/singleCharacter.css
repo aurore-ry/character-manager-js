@@ -1,16 +1,14 @@
 body {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #6c0979;
-  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #6c0979), to(#0016ff));
-  background: linear-gradient(90deg, #6c0979 35%, #0016ff 100%);
+  background-color: #2a093d;
+  font-family: sans-serif;
 }
 
 body h1 {
   padding-left: 5em;
   color: white;
-  text-transform: capitalize;
-  text-shadow: 5px 2px 2px black;
+  text-transform: uppercase;
 }
 
 body li {
@@ -19,29 +17,44 @@ body li {
 
 body img {
   border-radius: 50%;
-  -webkit-box-shadow: 5px 2px 2px black;
-          box-shadow: 5px 2px 2px black;
+  -webkit-box-shadow: 2px 2px 2px #0000003d;
+          box-shadow: 2px 2px 2px #0000003d;
 }
 
 body a {
-  padding: 1em;
-  margin: 1em;
-  border: solid 1px white;
-  border-radius: 2px;
   color: white;
   text-decoration: none;
-  text-transform: capitalize;
-  background-color: #6c0979;
-  -webkit-box-shadow: 5px 2px 2px black;
-          box-shadow: 5px 2px 2px black;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  opacity: .5;
+  text-transform: uppercase;
 }
 
-body a:hover {
-  opacity: 1;
-  background-color: #0016ff;
+body .edit-style-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 148px;
+  height: 40px;
+  margin-top: 10px;
+  padding: 2px 10px;
+  border: 2px solid rgba(255, 255, 255, 0.219);
+  border-radius: 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  -webkit-transition: border-color 280ms linear 0s;
+  transition: border-color 280ms linear 0s;
+}
+
+body .edit-style-btn:hover {
+  border-color: white;
 }
 
 body .navbar {
@@ -51,15 +64,16 @@ body .navbar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 25px;
 }
 
 body .card {
   margin: 0 auto;
   border-radius: 10px;
   width: 80%;
-  background-color: darkslategrey;
-  -webkit-box-shadow: 10px 5px 5px black;
-          box-shadow: 10px 5px 5px black;
+  background-color: #390b5c;
+  -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

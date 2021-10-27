@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/singleCharacter.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/singleCharacter.css" />
     <title>character manager</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="title">characters manager</h1>
-    <div class="card__container">
-    </div>
+    <div class="card__container"></div>
     <div class="navbar">
-        <a href="#">character editor</a>
-        <a href="#" id="del">character delete</a>
-        <a href="../index.html" id="home">home</a>
+      <a href="#" id="edit" class="edit-style-btn">character editor</a>
+      <a href="#" id="del" class="edit-style-btn">character delete</a>
+      <a href="../index.html" id="home" class="edit-style-btn">home</a>
     </div>
     <template id="templateCard">
-
-        
-        <ul class="card" >
-            <li class="card__image"><img id="avatarImg" src="../images/Marty_McFly.jpg" alt=""></li>
-            <li class="card__name"><h3></h3></li>
-            <li class="card__shortDesc"></li>
-            <li class="card__longDesc"></li>
-        </ul>
-
+      <ul class="card">
+        <li class="card__image">
+          <img id="avatarImg" src="../images/Marty_McFly.jpg" alt="" />
+        </li>
+        <li class="card__name"><h3></h3></li>
+        <li class="card__shortDesc"></li>
+        <li class="card__longDesc"></li>
+      </ul>
     </template>
-</body>
-<script src="../src/singleCharacter.js"></script>
+  </body>
+  <script src="../src/singleCharacter.js"></script>
 </html>
