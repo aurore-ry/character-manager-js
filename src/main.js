@@ -261,7 +261,7 @@ const put = async (url, data, id) => {
 
 
 
-let testid="dcaf3afb-3f20-4e7b-90a9-55b3eaafaf1d";
+let testid="1d91da00-5905-41cd-8586-497788053ff8";
 
 //Start Phil
 let submitIndex = document.querySelector("#submit_index");
@@ -271,7 +271,8 @@ let nameField = document.querySelector("#a");
 let shortDescField = document.querySelector("#b");
 let longDescField = document.querySelector("#c");
 
-nameField.value="";
+if ( typeof nameField !== undefined){ 
+  nameField.value= "";}
 shortDescField.value="";
 longDescField.value="";
 
@@ -329,3 +330,4 @@ submitButton.addEventListener("click", async()=>{
 
 
 });
+
