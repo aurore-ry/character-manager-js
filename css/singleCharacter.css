@@ -83,7 +83,7 @@ body .card__name {
 
 body .card__shortDesc {
   width: 70%;
-  color: lightgray;
+  color: #c7c3c3;
   font-size: smaller;
   padding-bottom: 2em;
 }
