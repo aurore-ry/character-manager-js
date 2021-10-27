@@ -1,6 +1,8 @@
 const url = "https://character-database.becode.xyz";
-
 const cardTemplate = document.querySelector("#card-template");
+const createCharacterPopup = document.querySelector(".form-container");
+
+// Network helpers
 
 const get = async (url) => {
   try {
@@ -12,19 +14,26 @@ const get = async (url) => {
   }
 };
 
-const getAllCharacters = async () => {
-  const characters = await get(`${url}/characters`);
-  return characters;
+const post = async (url, values) => {
+  try {
+    const req = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(values),
+    });
+    const data = await req.json();
+    return data;
+  } catch (error) {
+    console.error(error.message);
+  }
 };
 
-const getCharacterById = async (id) => {
-  const character = await get(`${url}/characters/${id}`);
-  return character;
-};
-
-const post = async (url, data) => {
-  const response = await fetch(url, {
-    method: "POST",
+const put = async (url, data, id) => {
+  const response = await fetch(url + "/characters/" + testid, {
+    method: "PUT",
     headers: {
       "Content-Type": "application/json",
     },
@@ -39,11 +48,55 @@ const del = async (url) => {
   });
 };
 
+// Service functions
+
+const getAllCharacters = async () => {
+  const characters = await get(`${url}/characters`);
+  return characters;
+};
+
+const getCharacterById = async (id) => {
+  const character = await get(`${url}/characters/${id}`);
+  return character;
+};
+
+const createCharacter = async ({
+  name,
+  shortDescription,
+  description,
+  image,
+}) => {
+  const newCharacter = await post(`${url}/characters`, {
+    name,
+    shortDescription,
+    description,
+    image,
+  });
+
+  if (newCharacter.id == null) {
+    throw new Error(newCharacter.message);
+  }
+
+  return newCharacter.id;
+};
+
+const readImage = (file) =>
+  new Promise((resolve, reject) => {
+    // Check if the file is an image.
+    if (file.type && !file.type.startsWith("image/")) {
+      console.log("File is not an image.", file.type, file);
+      return reject(new Error("File is not an image."));
+    }
+
+    const reader = new FileReader();
+    reader.addEventListener("load", (event) => {
+      return resolve(event.target.result);
+    });
+    reader.readAsDataURL(file);
+  });
+
 // display all
 const home = async () => {
-  const char1 = await getCharacterById("a4d08a81-d02b-4545-97f8-87ee7bdb190b");
-  console.log("char1=", char1.name);
-
   const characters = await getAllCharacters();
   const parentEl = document.querySelector(".hero-wrapper");
 
@@ -53,7 +106,6 @@ const home = async () => {
     const currentCharacter = document
       .createElement("div")
       .appendChild(templateNode);
-    console.log(currentCharacter);
     currentCharacter.setAttribute("id", character.id);
 
     const img = currentCharacter.querySelector("img.avatar-hero-card");
@@ -78,192 +130,64 @@ const home = async () => {
   });
 };
 
+// Add new character
+const onCreateCharacterFormSubmit = async (ev) => {
+  ev.preventDefault();
+
+  const imageEl = createCharacterPopup.querySelector("#character-image");
+  const nameEl = createCharacterPopup.querySelector("#character-name");
+  const shortDescriptionEl = createCharacterPopup.querySelector(
+    "#character-short-description"
+  );
+  const descriptionEl = createCharacterPopup.querySelector(
+    "#character-description"
+  );
+
+  const imageFileList = imageEl.files;
+
+  const name = nameEl.value;
+  const shortDescription = shortDescriptionEl.value;
+  const description = descriptionEl.value;
+  const image = await readImage(imageFileList[0]);
+
+  try {
+    const newCharacterId = await createCharacter({
+      name,
+      shortDescription,
+      description,
+      image: image.replace(/data:image\/[a-z]+\;base64,/gi, ""),
+    });
+
+    window.location.href = `/html/singleCharacter.html?id=${newCharacterId}`;
+  } catch (error) {
+    const errorEl = createCharacterPopup.querySelector(
+      "#create-character-error"
+    );
+
+    errorEl.textContent = error.message;
+  }
+};
+
+const onCreateCharacterPopupOpen = () => {
+  const form = document.querySelector("#new-character-form");
+  form.addEventListener("submit", onCreateCharacterFormSubmit);
+};
+
 // -- Main page open form for add character --
 const openForm = () => {
-  document.querySelector(".form-container").style.display = "flex";
+  createCharacterPopup.style.display = "flex";
+  onCreateCharacterPopupOpen();
 };
 const closeForm = () => {
-  document.querySelector(".form-container").style.display = "none";
+  createCharacterPopup.style.display = "none";
 };
 
 home();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const put = async (url, data, id) => {
-  const response = await fetch(url+"/characters/"+testid, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
-  return response;
-};
-
-
-
-
-
-
-
-
-let testid="1d91da00-5905-41cd-8586-497788053ff8";
-
 //Start Phil
+
+let testid = "1d91da00-5905-41cd-8586-497788053ff8";
+
 let submitIndex = document.querySelector("#submit_index");
 let submitButton = document.querySelector("#submit_button");
 
@@ -271,52 +195,46 @@ let nameField = document.querySelector("#a");
 let shortDescField = document.querySelector("#b");
 let longDescField = document.querySelector("#c");
 
-if ( typeof nameField !== undefined){ 
-  nameField.value= "";}
-shortDescField.value="";
-longDescField.value="";
+nameField.value = "";
 
-submitIndex.addEventListener("click", async()=>{
+shortDescField.value = "";
+longDescField.value = "";
+
+submitIndex.addEventListener("click", async () => {
   /* let heroeIndex = document.querySelector("#submit_index").value; */
 
+  let testall = await get(url);
+  let test = await get(url + "/characters/" + testid);
 
-  let testall= await get(url);
-  let test= await get(url+"/characters/"+testid);
-
-  
   /* console.log(test); */
   /* console.log(testall); */
   let editImage = test.image;
   let editName = test.name;
   let editShortDesc = test.shortDescription;
-  let editLongDesc =  test.description;
-  document.querySelector("#i").src=("data:image/jpeg;base64,"+editImage);
-  nameField.value= editName;
-  shortDescField.value= editShortDesc;
-  longDescField.value= editLongDesc;
+  let editLongDesc = test.description;
+  document.querySelector("#i").src = "data:image/jpeg;base64," + editImage;
+  nameField.value = editName;
+  shortDescField.value = editShortDesc;
+  longDescField.value = editLongDesc;
 
   console.log(editName);
+});
 
-  
-})
-
-submitButton.addEventListener("click", async()=>{
+submitButton.addEventListener("click", async () => {
   /* let imageInput = document.querySelector("#i").src; */
-  let test= await get(url+"/characters/"+testid);
-  
-  
+  let test = await get(url + "/characters/" + testid);
+
   let imageInput = test.image;
 
   let nameInput = document.querySelector("#a").value;
   let editShortDescInput = document.querySelector("#b").value;
   let editLongDescInput = document.querySelector("#c").value;
-  
-  
+
   console.log(nameInput);
   console.log(editShortDescInput);
   console.log(editLongDescInput);
-  
-  let editHeroe = new Object;
+
+  let editHeroe = new Object();
   editHeroe.id = testid;
   editHeroe.image = imageInput;
   editHeroe.name = nameInput;
@@ -324,10 +242,5 @@ submitButton.addEventListener("click", async()=>{
   editHeroe.description = editShortDescInput;
 
   console.log(editHeroe);
-  let update = await put(url,editHeroe,testid);
-  
-  
-
-
+  let update = await put(url, editHeroe, testid);
 });
-

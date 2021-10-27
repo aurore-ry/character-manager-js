@@ -237,15 +237,17 @@ header#app-header .search-input .submit-search-button .search-glass {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 25px;
-  width: 148px;
-  height: 40px;
+  height: 52px;
   margin-top: 10px;
   padding: 2px 10px;
-  border: 2px solid rgba(255, 255, 255, 0.219);
+  border: 2px solid rgba(136, 8, 255, 0.664);
   border-radius: 40px;
   text-decoration: none;
+  -webkit-box-shadow: 0 5px 8px 5px rgba(207, 17, 255, 0.24);
+          box-shadow: 0 5px 8px 5px rgba(207, 17, 255, 0.24);
   background-color: rgba(42, 9, 61, 0.616);
   color: white;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
   -webkit-transition: border-color 280ms linear 0s;
@@ -254,7 +256,7 @@ header#app-header .search-input .submit-search-button .search-glass {
 }
 
 .main-page-footer .add-character-button:hover {
-  border-color: white;
+  border: 2px solid white;
 }
 
 .main-page-footer .form-container {
@@ -285,6 +287,7 @@ header#app-header .search-input .submit-search-button .search-glass {
 }
 
 .main-page-footer .form-container .form-popup {
+  padding-top: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,9 +295,6 @@ header#app-header .search-input .submit-search-button .search-glass {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -307,5 +307,28 @@ header#app-header .search-input .submit-search-button .search-glass {
   font-weight: bold;
   -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
           box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+}
+
+.main-page-footer .form-container .form-popup .label-file {
+  padding: 2px 5px;
+  border-radius: 8px;
+  border: 2px solid white;
+  cursor: pointer;
+  background: #ffffff24;
+  color: white;
+  cursor: pointer;
+}
+
+.main-page-footer .form-container .form-popup .btn-file-upload {
+  display: none;
+  padding-bottom: 18px;
+}
+
+.main-page-footer .form-container .form-popup .label-name {
+  padding-top: 12px;
+}
+
+.main-page-footer .form-container .form-popup .label-description {
+  padding-top: 12px;
 }
 /*# sourceMappingURL=main.css.map */

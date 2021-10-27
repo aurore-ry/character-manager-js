@@ -26,7 +26,10 @@
       </form>
     </header>
 
-    <section class="hero-wrapper"></section>
+    <section class="hero-wrapper">
+      <!-- Cards go here -->
+    </section>
+
     <footer class="main-page-footer">
       <button class="add-character-button" onclick="openForm()">
         add a new character <img src="" />
@@ -36,27 +39,48 @@
         <button class="close-form" onclick="closeForm()">X</button>
 
         <form
-          action="index.html/characters"
+          action="#"
           method="post"
           enctype="multipart/form-data"
           class="form-popup"
+          id="new-character-form"
         >
-          <label for="profile_pic">Choose file to upload</label>
+          <label class="label-file" for="character-image"
+            >Choose file to upload</label
+          >
           <input
+            class="btn-file-upload"
             type="file"
-            id="profile_pic"
+            id="character-image"
             name="profile_pic"
             accept=".jpg, .jpeg, .png"
           />
-          <label for="name-character">Name of your character</label>
-          <input type="text/plain" class="name-character" />
-          <label for="small-description"
+          <label for="character-name" class="label-name"
+            >Name of your character</label
+          >
+          <input type="text" id="character-name" />
+
+          <label for="character-short-description" class="label-description"
             >Write a short description of the character</label
           >
-          <input type="text/plain" class="small-desc-character" />
-          <label for="long-description">Enter the story of the character</label>
-          <input type="text/plain" class="story" />
-          <button>Submit</button>
+          <input type="text" id="character-short-description" />
+          <label for="character-description"
+            >Enter the story of the character</label
+          >
+          <textarea
+            type="text"
+            id="character-description"
+            class="story"
+          ></textarea>
+          <button
+            type="submit"
+            id="new-character-submit-button"
+            class="submit-btn"
+          >
+            Submit
+          </button>
+
+          <span id="create-character-error" style="color: red"></span>
         </form>
       </div>
     </footer>
