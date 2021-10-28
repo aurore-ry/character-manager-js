@@ -36,8 +36,6 @@
       </button>
 
       <div class="form-container">
-        <button class="close-form" onclick="closeForm()">X</button>
-
         <form
           action="#"
           method="post"
@@ -45,6 +43,7 @@
           class="form-popup"
           id="new-character-form"
         >
+          <button class="close-form" onclick="closeForm()">X</button>
           <label class="label-file" for="character-image"
             >Choose file to upload</label
           >
@@ -83,6 +82,13 @@
           <span id="create-character-error" style="color: red"></span>
         </form>
       </div>
+      <article class="creators">
+        Created by
+        <a href="https://github.com/aurore-ry" id="a-rmy">Aurore Remy</a> &
+        <a href="https://github.com/Laverdure77" id="phil-m"
+          >Philippe Meulemans</a
+        >
+      </article>
     </footer>
 
     <template id="card-template">
