@@ -223,7 +223,7 @@ header#app-header .search-input .submit-search-button .search-glass {
   bottom: 0;
   padding-bottom: 25px;
   width: 100%;
-  background-color: rgba(42, 9, 61, 0.842);
+  background-color: rgba(42, 9, 61, 0.94);
 }
 
 .main-page-footer .add-character-button {
@@ -273,17 +273,8 @@ header#app-header .search-input .submit-search-button .search-glass {
   position: fixed;
   bottom: 0;
   border: 1px solid #5900ff;
-  background-color: #06030894;
+  background-color: #0000007d;
   z-index: 9;
-}
-
-.main-page-footer .form-container .close-form {
-  background: none;
-  color: red;
-  font-weight: bolder;
-  font-size: 40px;
-  border: none;
-  cursor: pointer;
 }
 
 .main-page-footer .form-container .form-popup {
@@ -300,13 +291,35 @@ header#app-header .search-input .submit-search-button .search-glass {
           align-items: center;
   -ms-flex-item-align: center;
       align-self: center;
-  width: 662px;
-  height: 448;
-  background-color: #5f08a1;
+  width: 80%;
+  height: 80%;
+  background-color: #390b5c;
   color: white;
   font-weight: bold;
   -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
           box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+
+.main-page-footer .form-container .form-popup .close-form {
+  background: none;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 42px;
+  -webkit-transition: color 280ms linear 0s;
+  transition: color 280ms linear 0s;
+}
+
+.main-page-footer .form-container .form-popup .close-form:hover {
+  color: #ff1b1b;
 }
 
 .main-page-footer .form-container .form-popup .label-file {
@@ -319,6 +332,11 @@ header#app-header .search-input .submit-search-button .search-glass {
   cursor: pointer;
 }
 
+.main-page-footer .form-container .form-popup .label-file:hover {
+  background-color: white;
+  color: #390b5c;
+}
+
 .main-page-footer .form-container .form-popup .btn-file-upload {
   display: none;
   padding-bottom: 18px;
@@ -326,9 +344,50 @@ header#app-header .search-input .submit-search-button .search-glass {
 
 .main-page-footer .form-container .form-popup .label-name {
   padding-top: 12px;
+  margin-bottom: 10px;
+}
+
+.main-page-footer .form-container .form-popup #character-name {
+  margin-bottom: 12px;
 }
 
 .main-page-footer .form-container .form-popup .label-description {
-  padding-top: 12px;
+  margin-bottom: 6px;
+}
+
+.main-page-footer .form-container .form-popup #character-short-description {
+  margin-bottom: 12px;
+}
+
+.main-page-footer .form-container .form-popup .story {
+  width: 70%;
+  height: 50%;
+  margin-top: 12px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.24);
+}
+
+.main-page-footer .creators {
+  padding-top: 15px;
+  color: white;
+}
+
+.main-page-footer .creators #a-rmy {
+  text-decoration: none;
+  color: #ff73a1;
+}
+
+.main-page-footer .creators #a-rmy:hover {
+  font-weight: bold;
+}
+
+.main-page-footer .creators #phil-m {
+  text-decoration: none;
+  color: red;
+}
+
+.main-page-footer .creators #phil-m:hover {
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
