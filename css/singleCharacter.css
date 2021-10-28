@@ -95,9 +95,15 @@ body .card__name {
   color: white;
 }
 
+body .card .divider {
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.219);
+  width: 100%;
+}
+
 body .card__shortDesc {
   width: 70%;
-  color: lightgray;
+  color: white;
   font-size: smaller;
   padding-bottom: 2em;
 }
@@ -105,5 +111,6 @@ body .card__shortDesc {
 body .card__longDesc {
   width: 90%;
   padding-bottom: 5em;
+  color: white;
 }
 /*# sourceMappingURL=singleCharacter.css.map */

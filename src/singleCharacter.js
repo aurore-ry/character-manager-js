@@ -92,51 +92,43 @@ const readImage = (file) =>
     });
     reader.readAsDataURL(file);
   });
-  
-  // single character page
+
+// single character page
 let target = document.querySelector(".card__container");
 let deleteChar = document.querySelector("#del");
 let currentPageUrl = window.location.href;
 let currentID = currentPageUrl.split("=")[1];
 
-const displayCharacter = async()=>{
-    
-    let currentCharacter = await getCharacterById(currentID);
-    console.log(currentCharacter);
+const displayCharacter = async () => {
+  let currentCharacter = await getCharacterById(currentID);
+  console.log(currentCharacter);
 
-    let card = document.querySelector("#templateCard");
-    let templateSingle = card.cloneNode(true).content;
-    let image = templateSingle.querySelector("#avatarImg");
-    let name = templateSingle.querySelector(".card__name");
-    let shortDesc = templateSingle.querySelector(".card__shortDesc");
-    let desc = templateSingle.querySelector(".card__longDesc");
+  let card = document.querySelector("#templateCard");
+  let templateSingle = card.cloneNode(true).content;
+  let image = templateSingle.querySelector("#avatarImg");
+  let name = templateSingle.querySelector(".card__name");
+  let shortDesc = templateSingle.querySelector(".card__shortDesc");
+  let desc = templateSingle.querySelector(".card__longDesc");
 
-    image.setAttribute("src", "data:image/jpeg;base64,"+ currentCharacter.image);
-    image.setAttribute( "width", "100px");
-    image.setAttribute( "height", "100px");
-    name.innerHTML= currentCharacter.name;
-    shortDesc.innerHTML= currentCharacter.shortDescription;
-    desc = currentCharacter.description;
-    target.appendChild(templateSingle);
-
-}
+  image.setAttribute("src", "data:image/jpeg;base64," + currentCharacter.image);
+  image.setAttribute("width", "100px");
+  image.setAttribute("height", "100px");
+  name.innerHTML = currentCharacter.name;
+  shortDesc.innerHTML = currentCharacter.shortDescription;
+  desc.innerHTML = currentCharacter.description;
+  target.appendChild(templateSingle);
+};
 // link to editor page
 
-let edit = document.querySelector("#edit")
-edit.setAttribute(
-  "href",
-  "./edition.html?id="+ currentID);
+let edit = document.querySelector("#edit");
+edit.setAttribute("href", "./edition.html?id=" + currentID);
 // delete character
-deleteChar.addEventListener("click", async()=>{
-
-if (confirm("Are You Sure")){
-    
-    alert ("Character deleted");
-    await del (url, currentID);
+deleteChar.addEventListener("click", async () => {
+  if (confirm("Are You Sure")) {
+    alert("Character deleted");
+    await del(url, currentID);
     window.location.href = "/";
-
-};
-
+  }
 });
 //Return Home package
 
@@ -144,7 +136,3 @@ if (confirm("Are You Sure")){
 returnHome.addEventListener('click', window.lo)
  */
 displayCharacter();
-
-
-
-
