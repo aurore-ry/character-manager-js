@@ -12,29 +12,43 @@
     <header id="app-header">
       <h1>character editor</h1>
     </header>
-    <!-- <form>
-      <label for="hindex">Hero index:</label><br>
-      <input type="text" id="d" name="hindex" placeholder="Hero name...."
-      value="test"><br>
-    </form>
-    <button type="submitHero" id="submit_index" >Choose Heroe</button>
-    <form> -->
+
+    <form>
       <label for="himage">Hero Picture</label>
-      <input type="image" id="i" width="56" height="56" value="image">
-      <label for="hname">Hero name:</label><br>
-      <input type="text" id="a" name="hname" placeholder="Hero name ...."><br>
-      <label for="hsdesc">Short description:</label><br>
-      <input type="text" id="b" name="hsdesc" placeholder="Hero short desc ..."><br>
-      <label for="hldesc">Long description:</label><br>
-      <input type="text" id="c" name="hldesc" placeholder="Hero long desc ..."><br>
-    </form> 
-     <button type="submit" id="submit_button" >Post Edition</button>
-    
-      <div class="navbar">
-        <a class="btn" href="#">characters Manager</a>
-        <a class="btn" href="#">character delete</a>
-      </div>
-    
+      <input type="image" id="i" width="100" height="100s" value="image" />
+      <label for="hname">Hero name:</label><br />
+      <input
+        type="text"
+        id="a"
+        name="hname"
+        placeholder="Hero name ...."
+      /><br />
+      <label for="hsdesc">Short description:</label><br />
+      <textarea
+        type="text"
+        id="b"
+        name="hsdesc"
+        placeholder="Hero short desc ..."
+      ></textarea>
+      <br />
+      <label for="hldesc">Long description:</label><br />
+      <textarea
+        type="text"
+        id="c"
+        name="hldesc"
+        placeholder="Hero long desc ..."
+      ></textarea>
+      <br />
+    </form>
+
+    <button type="submit" id="submit_button">Post Edition</button>
+
+    <div class="navbar">
+      <a href="../index.html" id="home" class="edit-style-btn"
+        >Home</a
+      >
+    </div>
   </body>
   <script src="../src/main.js"></script>
+  
 </html>

@@ -246,5 +246,18 @@ submitButton.addEventListener("click", async () => {
   editHeroe.description = editShortDescInput;
 
   console.log(editHeroe);
-  let update = await put(url, editHeroe, testid);
+//   let update = await put(url, editHeroe, testid);
+var userselection = confirm("Are you sure you want to update");
+
+  if (userselection == true) {
+    let update = await put(url, editHeroe, testid);
+    if (update.ok) {
+      alert("Character Updated");
+      window.location.href = "/";
+    } else {
+      alert("Error:" + update.status);
+    }
+  } else {
+    alert("Aborted");
+  }
 });
