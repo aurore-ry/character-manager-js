@@ -111,6 +111,7 @@ header#app-header .search-input .submit-search-button .search-glass {
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
   min-width: 275px;
+  margin-bottom: 15px;
   padding: 25px 25px;
   background-color: #390b5c;
   border-radius: 12px;
@@ -333,7 +334,6 @@ header#app-header .search-input .submit-search-button .search-glass {
 }
 
 .main-page-footer .form-container .form-popup .label-file:hover {
-  background-color: white;
   color: #390b5c;
 }
 
